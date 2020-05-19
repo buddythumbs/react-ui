@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+// Components
+import Navbar from './components/Navbar'
+import Mainarea from './components/Mainarea'
+
+import styled from 'styled-components'
+
+const AppDiv = styled.div`
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: ${props => props.dark ? '#545454' : '#eeeeee' };
+`;
 
 function App() {
+
+  // Declare a new state variable, which we'll call "count"
+  const [darkMode, setDarkMode] = useState(true);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppDiv dark={darkMode}>
+      <Navbar dark={darkMode}></Navbar>
+      <Mainarea dark={darkMode}></Mainarea>
+    </AppDiv>
   );
 }
 
