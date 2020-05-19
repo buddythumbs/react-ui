@@ -1,8 +1,68 @@
 body {
-    font-size: 12px;
-    height: 100vh;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    font-family: "Arial";
-  }
+  font-size: 12px;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+
+  /* Border radius for all elements */
+  --border-radius: 8px;
+
+  /* Navbar height */
+  --nav-size: 60px;
+
+  /* Animation speed */
+  --speed: 500ms;
+
+}
+
+/* All links should have same color as text */
+a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* CSS transition classes for dropdown menus */
+/*  */
+/*  */
+
+/* Main menu */
+.menu-primary-enter{
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active{
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-primary-exit{
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+/* Secondary Menu */
+.menu-secondary-enter{
+  transform: translateX(110%);
+}
+.menu-secondary-enter-active{
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-exit{
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
+
+.menu {
+  width: 100%;
+}
