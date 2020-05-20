@@ -7,6 +7,8 @@ import {
   IoMdAddCircleOutline, 
   IoMdNotificationsOutline,
   IoMdGitMerge,
+  IoMdColorFilter,
+  IoIosColorFilter,
   IoMdArrowRoundDown
 } from 'react-icons/io';
 
