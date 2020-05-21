@@ -20,6 +20,7 @@ export function DropdownMenu(){
     setMenuHeight(height)
   }
 
+
   function DropdownItem(props){
     return (
       <DropdownMenuItem {...props} onClick={ () => props.goToMenu && setActiveMenu(props.goToMenu) }>
@@ -29,10 +30,12 @@ export function DropdownMenu(){
       </DropdownMenuItem>
     )
   }
+
+
   return (
     <Dropdown style={{height: menuHeight}}>
       {/* Main menu */}
-      <CSSTransition 
+      <CSSTransition
         in={activeMenu === 'main'}
         unmountOnExit
         timeout={500}
@@ -40,10 +43,10 @@ export function DropdownMenu(){
         onEnter={calcHeight}
         >
           <div className='menu'>
-            <DropdownItem leftIcon={<IoMdConstruct/>} rightIcon={<IoIosArrowForward/>} goToMenu={'animals'}>
+            <DropdownItem leftIcon={<IoMdConstruct/>}  goToMenu={'animals'}>
               Profile
             </DropdownItem>
-            <DropdownItem goToMenu={'settings'} rightIcon={<IoIosArrowForward/>}>Settings</DropdownItem>
+            <DropdownItem goToMenu={'settings'} >Settings</DropdownItem>
             <DropdownItem>Something</DropdownItem>
             <DropdownItem>Something</DropdownItem>
             <DropdownItem>Something</DropdownItem>
@@ -97,7 +100,7 @@ export function DropdownMenu(){
 
 export function NavItem(props) {
 
-  const [open, setOOpen ] = useState(false)
+  const [ open, setOOpen ] = useState(false)
 
   return (
     <NavListItem>
@@ -185,6 +188,7 @@ const Dropdown = styled.div`
 `;
 
 const DropdownMenuItem = styled.a`
+    cursor: pointer;
     height: 50px;
     display: flex;
     align-items: center;
@@ -206,7 +210,7 @@ const LeftIcon = styled(IconButton)`
 `;
 
 const RightIcon = styled(IconButton)`
-    margin-left: auto;
+    // margin-left: auto;
     background-color: var(--bg-accent);
     &:hover{
         filter: None;
