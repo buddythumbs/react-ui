@@ -7,9 +7,7 @@ import {
   IoMdAddCircleOutline, 
   IoMdNotificationsOutline,
   IoMdGitMerge,
-  IoMdColorFilter,
-  IoIosColorFilter,
-  IoMdArrowRoundDown
+  IoIosArrowDown,
 } from 'react-icons/io';
 
 import styled from 'styled-components'
@@ -55,7 +53,7 @@ function App() {
         href:'#'
       },
       {
-        icon: <IoMdArrowRoundDown/>,
+        icon: <IoIosArrowDown/>,
         href:'#',
         children: <DropdownMenu/>
       },
