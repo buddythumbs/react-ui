@@ -16,7 +16,7 @@ body {
   --nav-size: 60px;
 
   /* Animation speed */
-  --speed: 300ms;
+  --speed: 400ms;
 
 }
 
@@ -31,35 +31,41 @@ a{
 /*  */
 
 /* Main menu */
-.menu-primary-enter{
+.menu-primary-enter {
   position: absolute;
-  transform: translateX(-110%);
+  /* transform: scale(0,0) translateX(-25%) translateY(-25%); */
+  opacity: 0;
 }
-.menu-primary-enter-active{
-  transform: translateX(0%);
+.menu-primary-enter-active {
+  /* transform: scale(1,1) translateX(0%) translateY(0%); */
+  opacity: 1;
   transition: all var(--speed) ease;
 }
-.menu-primary-exit{
+.menu-primary-exit {
   position: absolute;
 }
 .menu-primary-exit-active {
-  transform: translateX(-110%);
+  /* transform: scale(0,0); */
+  opacity: 0;
   transition: all var(--speed) ease;
 }
 
-/* Secondary Menu */
-.menu-secondary-enter{
-  transform: translateX(110%);
+
+.menu-secondary-enter {
+  /* transform: translateX(110%); */
+  opacity: 0;
 }
-.menu-secondary-enter-active{
-  transform: translateX(0%);
-  transition: all var(--speed) ease;
+.menu-secondary-enter-active {
+  /* transform: translateX(0%); */
+  opacity: 1;
+  transition: opacity var(--speed) ease;
 }
-.menu-secondary-exit{
+.menu-secondary-exit {
+
 }
 .menu-secondary-exit-active {
-  transform: translateX(110%);
-  transition: all var(--speed) ease;
+  opacity: 0;
+  transition: opacity var(--speed) ease;
 }
 
 
